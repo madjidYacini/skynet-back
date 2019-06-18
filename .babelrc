@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "dotenv-import",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "utils": "./libs/utils",
+          "services": "./libs/services",
+          "constants": "./constants",
+          "helpers": "./helpers",
+          "controllers": "./controllers"
+        }
+      }
+    ]
+  ]
+}
